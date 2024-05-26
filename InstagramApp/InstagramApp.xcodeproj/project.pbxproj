@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0E2E4AB2C03C3A900F6F246 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2E4AA2C03C3A900F6F246 /* CustomButton.swift */; };
+		A0E2E4AE2C03CC1000F6F246 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2E4AD2C03CC1000F6F246 /* HomeView.swift */; };
+		A0E2E4B02C03CC1900F6F246 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2E4AF2C03CC1900F6F246 /* HomeBuilder.swift */; };
+		A0E2E4B22C03CC6900F6F246 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2E4B12C03CC6900F6F246 /* HomeViewModel.swift */; };
+		A0E2E4B62C03D30A00F6F246 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E2E4B52C03D30A00F6F246 /* PostView.swift */; };
 		CF13B9EE2C0250DD004F440D /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13B9ED2C0250DD004F440D /* App.swift */; };
 		CF13B9F22C0250DE004F440D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF13B9F12C0250DE004F440D /* Assets.xcassets */; };
 		CF13B9F52C0250DE004F440D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF13B9F42C0250DE004F440D /* Preview Assets.xcassets */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0E2E4AA2C03C3A900F6F246 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A0E2E4AD2C03CC1000F6F246 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A0E2E4AF2C03CC1900F6F246 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		A0E2E4B12C03CC6900F6F246 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A0E2E4B52C03D30A00F6F246 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		CF13B9EA2C0250DD004F440D /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF13B9ED2C0250DD004F440D /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CF13B9F12C0250DE004F440D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +91,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0E2E4A82C03C39500F6F246 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				A0E2E4AA2C03C3A900F6F246 /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		A0E2E4AC2C03CBDB00F6F246 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A0E2E4AD2C03CC1000F6F246 /* HomeView.swift */,
+				A0E2E4AF2C03CC1900F6F246 /* HomeBuilder.swift */,
+				A0E2E4B12C03CC6900F6F246 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A0E2E4B42C03D2F400F6F246 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				A0E2E4B52C03D30A00F6F246 /* PostView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		CF13B9E12C0250DD004F440D = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +251,8 @@
 			children = (
 				CF13BA2C2C025EC4004F440D /* CustomElements */,
 				CF13BA252C025684004F440D /* Login */,
+				A0E2E4AC2C03CBDB00F6F246 /* Home */,
+				A0E2E4B42C03D2F400F6F246 /* Post */,
 				CF13BA172C02530A004F440D /* Splash */,
 			);
 			path = Modules;
@@ -233,6 +271,7 @@
 		CF13BA2C2C025EC4004F440D /* CustomElements */ = {
 			isa = PBXGroup;
 			children = (
+				A0E2E4A82C03C39500F6F246 /* CustomButton */,
 				CF13BA2D2C025ECB004F440D /* CustomTextField */,
 			);
 			path = CustomElements;
@@ -381,8 +420,13 @@
 				CF13BA312C026360004F440D /* Color.swift in Sources */,
 				CF13BA272C025745004F440D /* LoginView.swift in Sources */,
 				CF13BA2B2C0257DE004F440D /* LoginBuilder.swift in Sources */,
+				A0E2E4AB2C03C3A900F6F246 /* CustomButton.swift in Sources */,
+				A0E2E4AE2C03CC1000F6F246 /* HomeView.swift in Sources */,
+				A0E2E4B02C03CC1900F6F246 /* HomeBuilder.swift in Sources */,
 				CF13B9EE2C0250DD004F440D /* App.swift in Sources */,
+				A0E2E4B22C03CC6900F6F246 /* HomeViewModel.swift in Sources */,
 				CF13BA2F2C025EFD004F440D /* CustomTextField.swift in Sources */,
+				A0E2E4B62C03D30A00F6F246 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

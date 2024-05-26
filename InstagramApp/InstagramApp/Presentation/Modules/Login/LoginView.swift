@@ -16,6 +16,8 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 40) {
+            Spacer()
+                .frame(height: 120)
             Image("ig_logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -31,8 +33,49 @@ struct LoginView: View {
                         .bold()
                         .font(Font.system(size: 14))
                 }
+                VStack(spacing: 32) {
+                    VStack(spacing: 16) {
+                        CustomButton(text: "Log in", isDisabled: false) {
+                            //TODO: Login
+                        }
+                        
+                        HStack {
+                            Color(.gray)
+                                .frame(height: 0.4)
+                            Text("OR")
+                                .foregroundStyle(.gray)
+                                .font(Font.system(size: 14))
+                            Color(.gray)
+                                .frame(height: 0.4)
+                        }
+                    }
+                    Button {
+                        //TODO: Sign in with google
+                    } label: {
+                        Text("Sign in with google")
+                    }
+                }
+                
+                Spacer()
+                
+                VStack(spacing: 36) {
+                    Color(.gray)
+                        .frame(height: 0.4)
+                    HStack {
+                        Text("Dont have an account?")
+                            .foregroundStyle(.gray)
+                            .font(Font.system(size: 14))
+                        Button {
+                            //TODO: Go to sign up page
+                        } label: {
+                            Text("Sign Up.")
+                                .font(Font.system(size: 14))
+                        }
+                    }
+                }
             }
         }
+        .ignoresSafeArea(.keyboard, edges: .all)
         .padding(.horizontal, 16)
     }
 }
