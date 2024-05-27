@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct LoginView: View {
     let viewModel: LoginViewModel
+    @State var email = ""
+    @State var password = ""
 
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
@@ -23,8 +26,11 @@ struct LoginView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 50)
             VStack(spacing: 12) {
-                CustomTextField(placeholder: "Phone number, username or email adress", text: .constant(""))
-                CustomTextField(placeholder: "Email", text: .constant(""), type: .password)
+                CustomTextField(placeholder: "Phone number, username or email adress", 
+                                text: $email)
+                CustomTextField(placeholder: "Password",
+                                text: $password,
+                                type: .password)
 
                 HStack {
                     Spacer()
@@ -36,7 +42,7 @@ struct LoginView: View {
                 VStack(spacing: 32) {
                     VStack(spacing: 16) {
                         CustomButton(text: "Log in", isDisabled: false) {
-                            //TODO: Login
+                            viewModel.signIn(email: email, password: password)
                         }
                         
                         HStack {
@@ -50,7 +56,7 @@ struct LoginView: View {
                         }
                     }
                     Button {
-                        //TODO: Sign in with google
+                       //TODO: Sign in google
                     } label: {
                         Text("Sign in with google")
                     }
@@ -77,6 +83,9 @@ struct LoginView: View {
         }
         .ignoresSafeArea(.keyboard, edges: .all)
         .padding(.horizontal, 16)
+        .onAppear() {
+            
+        }
     }
 }
 

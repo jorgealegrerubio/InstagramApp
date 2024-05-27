@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct InstagramAppApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            LoginBuilder().build()
+            if Auth.auth().currentUser != nil {
+                HomeBuilder().build()
+            } else {
+                LoginBuilder().build()
+            }
         }
     }
 }

@@ -23,10 +23,15 @@ struct HomeView: View {
                     .frame(height: 30)
                 Spacer()
                 HStack (spacing: 24) {
-                    Image("ic_heart")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 24)
+                    Button  {
+                        logOut()
+                    } label: {
+                        Image("ic_heart")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 24)
+                    }
+
                     Image("ic_message")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -65,6 +70,20 @@ struct HomeView: View {
             Color(.gray)
                 .frame(height: 0.5)
             Spacer()
+        }
+    }
+    
+    func logOut() {
+        let dataSource = AuthDataSource()
+        let repository = AuthRepository(dataSource: dataSource)
+        let useCase = AuthUseCase(repository: repository)
+        
+        Task {
+            do {
+                try await useCase.logOut()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }

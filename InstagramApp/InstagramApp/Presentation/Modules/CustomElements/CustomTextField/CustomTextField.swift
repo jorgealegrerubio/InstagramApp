@@ -25,6 +25,7 @@ struct CustomTextField: View {
                     case .text:
                         TextField(placeholder, text: $text)
                             .font(Font.system(size: 14))
+                            .textInputAutocapitalization(.never)
                     case .password:
                         if isSecured {
                             SecureField(placeholder, text: $text)
