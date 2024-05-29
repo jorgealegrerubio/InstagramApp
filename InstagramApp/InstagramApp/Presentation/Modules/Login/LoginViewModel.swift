@@ -21,6 +21,7 @@ class LoginViewModel: ObservableObject {
                 try await authUseCase.signIn(email: email, password: password)
             } catch {
                 //TODO: Handle error
+                print("error.localizedDescription")
             }
         }
     }

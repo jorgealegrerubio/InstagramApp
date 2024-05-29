@@ -67,10 +67,21 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 16)
             }
+            
+            ScrollView {
+                ForEach(viewModel.posts) { post in
+                    AsyncImage(url: URL(string: post.imageURL)) 
+                }
+            }
+            
+            
             Color(.gray)
                 .frame(height: 0.5)
             Spacer()
         }
+        .onAppear(perform: {
+            viewModel.getPosts()
+        })
     }
     
     func logOut() {
